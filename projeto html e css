@@ -1,0 +1,315 @@
+HTML: <!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="styles.css">
+<title>Programação</title>
+</head>
+<body>
+<header>
+<nav>
+<div class="logo">Logo</div>
+<div class="search">
+<input type="text" placeholder="Pesquisar">
+<button>Buscar</button>
+</div>
+<div class="menu">
+<input type="checkbox" id="menu-toggle">
+<label for="menu-toggle" class="menu-icon">&#9776;</label>
+<ul class="menu-list">
+<!-- ... (itens de menu) ... -->
+<li><a href="#">Home</a></li>
+<li><a href="#">doces</a></li>
+<li><a href="#">Sobre</a></li>
+</ul>
+</div>
+</nav>
+</header>
+<div class="banner">
+<img src="banner.jpg" alt="Banner">
+</div>
+<div class="carousel-container">
+<div class="carousel-slide">
+<div style="background-color: blue;" class="carousel-item">
+<img src="image1.jpg" alt="Produto 3">
+<h3>Programação</h3>
+<p>Programação</p>
+</div>
+<div style="background-color:blue;" class="carousel-item">
+<img src="image1.jpg" alt="Produto 3">
+<h3>Front-end</h3>
+<p>Front-end</p>
+</div>
+<div style="background-color:blue;" class="carousel-item">
+<img src="image1.jpg" alt="Produto 3">
+<h3>Infraestrutura</h3>
+<p>Infraestrutura</p>
+</div>
+<div style="background-color:blue;" class="carousel-item">
+<img src="image1.jpg" alt="Produto 3">
+<h3>Business</h3>
+<p>Business</p>
+</div>
+<div style="background-color:blue;" class="carousel-item">
+<img src="image1.jpg" alt="Produto 3">
+<h3>Design & UX</h3>
+<p>Design & UX</p>
+</div>
+</div>
+</div>
+
+<div class="carousel-controls">
+<div class="carousel-control" onclick="prevSlide()">&#10094;</div>
+<div class="carousel-control" onclick="nextSlide()">&#10095;</div>
+</div>
+<script>
+
+// Funções para controlar o carrossel
+var carouselSlide = document.querySelector(".carousel-slide");
+var carouselItems = document.querySelectorAll(".carousel-item");
+var currentIndex = 0;
+
+function showSlide(index) {
+currentIndex = index;
+var translateX = -currentIndex * (100 / carouselItems.length);
+carouselSlide.style.transform = `translateX(${translateX}%)`;
+}
+
+function nextSlide() {
+currentIndex = (currentIndex + 1) % carouselItems.length;
+showSlide(currentIndex);
+}
+
+function prevSlide() {
+currentIndex = (currentIndex - 1 + carouselItems.length) % carouselItems.length;
+showSlide(currentIndex);
+}
+</script>
+<h2>Categorias</h2>
+<ul class="cat">
+<li><a href="#">docinhos</a></li>
+<li><a href="#">bolos</a></li>
+<li><a href="#">capucakes</a></li>
+
+</ul>
+</section>
+<script>
+
+
+function search() {
+var searchTerm = document.getElementById("searchInput").value;
+}
+function toggleCategoryMenu() {
+// Implemente a lógica para mostrar/ocultar o menu de categorias aqui.
+}
+}
+</script>
+<footer style="background-color: black;">
+<p style="color: white;">&copy; 2023 gabriele</p>
+</footer>
+</body>
+</html>
+{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+/* Estilos do cabeçalho */
+header {
+background-color: #0000FF;
+color: white;
+padding: 12px;
+}
+
+nav {
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.logo {
+font-size: 22px;
+}
+<div class="container">
+			<ul id="gn-menu" class="gn-menu-main">
+				<li class="gn-trigger">
+					<a class="gn-icon gn-icon-menu"><span>Menu</span></a>
+					<nav class="gn-menu-wrapper">
+						<div class="gn-scroller">
+							<ul class="gn-menu">
+								<li class="gn-search-item">
+									<input placeholder="Search" type="search" class="gn-search">
+									<a class="gn-icon gn-icon-search"><span>Search</span></a>
+}
+.categories {
+padding: 22px;
+}
+
+.categories h2 {
+font-size: 25px;
+margin-bottom: 12px;
+color: #0000FF;
+}
+
+.categories ul {
+list-style: none;
+padding-left: 20px;
+}
+
+.categories li {
+margin: 6px 0;
+}
+
+.categories a {
+color: #555;
+text-decoration: none;
+transition: color 0.3s ease;
+}
+
+.categories a:hover {
+color: #2B3856;
+}
+
+footer {
+text-align: center;
+padding: 10px;
+background-color: #657383;
+}
+
+.banner {
+display: flex;
+justify-content: center;
+padding: 20px 0;
+}
+
+.banner img {
+max-width: 100%;
+height: auto;
+}
+
+.links {
+display: flex;
+align-items: center;
+}
+
+.links a {
+color: #000000;
+margin-right: 20px;
+text-decoration: none;
+}
+
+.menu-button {
+display: flex;
+align-items: center;
+cursor: pointer;
+margin-left: 20px;
+}
+
+.search-box {
+display: flex;
+align-items: center;
+}
+
+.search input[type="text"] {
+color: white;
+}
+
+#searchInput {
+padding: 10px;
+font-size: 18px;
+border: 1px solid #ccc;
+border-radius: 5px;
+margin-right: 12px;
+}
+
+button {
+padding: 9px 16px;
+font-size: 16px;
+background-color: #555;
+color: white;
+border: none;
+border-radius: 4px;
+cursor: pointer;
+transition: background-color 0.3s ease; 
+}
+
+button:hover {
+background-color: #333; 
+}
+
+
+.carousel-container {
+display: flex;
+overflow: hidden;
+width: 100%;
+margin-top: 20px;
+}
+<div class="swiffy-slider">
+    <ul class="slider-container">
+        <li><img src="https://images.app.goo.gl/Ba8CvFg7fbsnwvvW8/1600x900" style="max-width: 100%;height: auto;"></li>
+        <li><img src="https://images.app.goo.gl/7uFUsRDrypstDJ8U7/1600x900" style="max-width: 100%;height: auto;"></li>
+        <li><img src="/https://images.app.goo.gl/kJaiWjGTHaze1tYC61600x900" style="max-width: 100%;height: auto;"></li>
+    </ul>
+
+    <button type="button" class="slider-nav"></button>
+    <button type="button" class="slider-nav slider-nav-next"></button>
+
+    <div class="slider-indicators">
+        <button class="active"></button>
+        <button></button>
+        <button></button>
+    </div>
+</div>
+}
+.carousel-controls {
+display: flex;
+justify-content: center;
+margin-top: 10px;
+}
+
+.carousel-control {
+cursor: pointer;
+margin: 0 5px;
+font-size: 1.5rem;
+color: #555; /* 
+transition: color 0.3s ease; 
+}
+
+.carousel-control:hover {
+color: #333; 
+}
+
+.cat {
+list-style-type: none;
+padding: 0;
+border: 2px solid #000;
+border-radius: 10px;
+margin-left: 5px;
+margin-bottom: 20px;
+width: 200px;
+padding: 10px;
+background-color: #ffffff;
+}
+
+li {
+margin-bottom: 5px;
+}
+
+a {
+text-decoration: none;
+color: #333;
+transition: color 0.3s ease;
+}
+
+a:hover {
+color: #007bff;
+}
+
+h2 {
+margin-left: 5px;
+}
+
+@media screen and (max-width: 767px) {
+}
